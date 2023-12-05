@@ -26,11 +26,35 @@ var ratingData = [
 
 
 
+
+
+    var listresto=["KFC", "Burger King", "Domino", "Subway", "Pizza Hut"]
+
+
+
+
+
+    for (var i = 0; i < listresto.length ; i++){
+
+        var theGroup= ratingData.filter((theresto)=>{return theresto.restaurant==listresto[i]});
+
+
+        console.log(theGroup);
+
+
+    }
+
+
+
+    // ratingData.map((rater)=>{return rater.restaurant=="KFC"})
+
+
+
     // b. List of all restaurants with average rating greater than or equal to 4. 
 
 
    var thefour=ratingData.filter((bigfour)=>{
-    {return bigfour.rating>4}
+    {return bigfour.rating>=4}
 });
 
    console.log(thefour);
