@@ -9,7 +9,7 @@ var ratingData = [
     {restaurant: 'Pizza Hut', rating:5}
     ] 
 
-
+    // a. Calculate the Average rating for all the restaurants.
 
     var listresto=["KFC", "Burger King", "Domino", "Subway", "Pizza Hut"];
 
