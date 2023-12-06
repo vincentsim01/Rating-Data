@@ -14,39 +14,80 @@ var ratingData = [
 
     // a. Calculate the Average rating for all the restaurants. 
 
-    var countrating=0;
+    // var countrating=0;
 
-    for (var i = 0; i <ratingData.length; i++){
+    // for (var i = 0; i <ratingData.length; i++){
 
-        countrating=countrating+ratingData[i].rating;   
+    //     countrating=countrating+ratingData[i].rating;   
 
-    }
+    // }
 
-    console.log(countrating);
-
-
+    // console.log(countrating);
 
 
 
-    var listresto=["KFC", "Burger King", "Domino", "Subway", "Pizza Hut"]
 
 
 
+
+
+
+
+
+    var listresto=["KFC", "Burger King", "Domino", "Subway", "Pizza Hut"];
+
+
+    var theGroup=[];
 
 
     for (var i = 0; i < listresto.length ; i++){
 
-        var theGroup[i]= ratingData.filter((theresto)=>{return theresto.restaurant==listresto[i]});
-
-
-        console.log(theGroup);
-
+        let filteredData = ratingData.filter(( restz ) => {return restz.restaurant == listresto[i]});
+        theGroup.push(filteredData);
 
     }
 
+    console.log(theGroup);
 
 
-    // ratingData.map((rater)=>{return rater.restaurant=="KFC"})
+
+    var theGroup2=[];
+
+
+    for (var j=0;j<theGroup.length;j++){
+
+
+        console.log(theGroup[j][0].rating);
+
+    theGroup2=[{
+            restaurantname:`${theGroup[j][0].restaurant}`,
+
+
+        // for (var k=0; k < Object.keys(theGroup[j]).length; k++){
+
+            
+        //             let values = Object.values(theGroup[j][k].rating);
+
+        //             let sum = values.reduce((accumulator, value) => {
+        //               return accumulator + value;
+        //             }, 0);
+
+        //             var theavgrating=sum/Object.keys(theGroup[j][k]).length;
+
+
+        //     }
+
+            averagerating:`(${theGroup[j][0].rating}+${theGroup[j][1].rating})/2`
+
+    }]}
+
+    
+
+    
+    console.log(theGroup2);
+
+
+
 
 
 
