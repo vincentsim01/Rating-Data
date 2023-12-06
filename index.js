@@ -36,7 +36,7 @@ var ratingData = [
 
     for (var i = 0; i < listresto.length ; i++){
 
-        var theGroup= ratingData.filter((theresto)=>{return theresto.restaurant==listresto[i]});
+        var theGroup[i]= ratingData.filter((theresto)=>{return theresto.restaurant==listresto[i]});
 
 
         console.log(theGroup);
