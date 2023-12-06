@@ -11,29 +11,6 @@ var ratingData = [
 
 
 
-
-    // a. Calculate the Average rating for all the restaurants. 
-
-    // var countrating=0;
-
-    // for (var i = 0; i <ratingData.length; i++){
-
-    //     countrating=countrating+ratingData[i].rating;   
-
-    // }
-
-    // console.log(countrating);
-
-
-
-
-
-
-
-
-
-
-
     var listresto=["KFC", "Burger King", "Domino", "Subway", "Pizza Hut"];
 
 
@@ -52,39 +29,36 @@ var ratingData = [
 
 
     var theGroup2=[];
+    var theGroup3=[];
 
 
     for (var j=0;j<theGroup.length;j++){
 
+        let sum=0;
 
-        console.log(theGroup[j][0].rating);
+        for (var k=0;k<theGroup[j].length;k++){
 
-    theGroup2=[{
+                                let values = theGroup[j][k].rating;
+
+                                sum=sum+values;
+
+                                var theavgrating=sum/theGroup[j].length;
+
+
+        }
+
+        theGroup2=[{
             restaurantname:`${theGroup[j][0].restaurant}`,
+            averagerating: `${theavgrating}`
 
+    }]
 
-        // for (var k=0; k < Object.keys(theGroup[j]).length; k++){
+    theGroup3.push(theGroup2);
 
-            
-        //             let values = Object.values(theGroup[j][k].rating);
-
-        //             let sum = values.reduce((accumulator, value) => {
-        //               return accumulator + value;
-        //             }, 0);
-
-        //             var theavgrating=sum/Object.keys(theGroup[j][k]).length;
-
-
-        //     }
-
-            averagerating:`(${theGroup[j][0].rating}+${theGroup[j][1].rating})/2`
-
-    }]}
+}
 
     
-
-    
-    console.log(theGroup2);
+    console.log(theGroup3);
 
 
 
