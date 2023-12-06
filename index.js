@@ -24,7 +24,7 @@ var ratingData = [
 
     }
 
-    console.log(theGroup);
+    // console.log(theGroup);
 
 
 
