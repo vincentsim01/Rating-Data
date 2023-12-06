@@ -38,11 +38,9 @@ var ratingData = [
 
         for (var k=0;k<theGroup[j].length;k++){
 
-                                let values = theGroup[j][k].rating;
-
-                                sum=sum+values;
-
-                                var theavgrating=sum/theGroup[j].length;
+            let values = theGroup[j][k].rating;
+            sum=sum+values;
+            var theavgrating=sum/theGroup[j].length;
 
 
         }
